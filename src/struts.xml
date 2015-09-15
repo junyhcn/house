@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+	
+	
+	<struts>
+		<package name="struts"  extends="struts-default">
+			<global-results>
+				<result name="login" type="redirect">/login.jsp</result>
+			</global-results>
+		
+			<action name="userAction" class="com.action.UserAction">
+				<result>/list.jsp</result>
+				<result name="error">/error.jsp</result>
+			</action>	
+		  
+		  	<action name="houseAction" class="com.action.HouseAction">
+		  		<result name="addHouse">/addHouse.jsp</result>
+		  	   	<result name="listhouse">/listhouse.jsp</result>
+		  	</action>
+		  	
+		  	<action name="myAction" class="com.action.MyAction">
+		  		<result>index.jsp</result>
+		  	</action>
+		</package>
+	
+	</struts>

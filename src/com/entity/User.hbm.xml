@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.entity">
+	<class name="User" table="users">
+		<id name="id" column="id">
+			<generator class="sequence">
+				<param name="sequence">seq_id</param>
+			</generator>
+		</id>
+		<property name="name" unique="true"></property>
+		<property name="password"></property>
+		<property name="telephone"></property>
+		<property name="userName"></property>
+		<property name="isAdmin"></property>
+	</class>
+
+
+</hibernate-mapping>
